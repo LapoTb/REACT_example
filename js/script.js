@@ -511,7 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = document.querySelectorAll(selector);
 
         elements.forEach(e => {
-            if (e.getAttribute('id') === localStorage.getItem('sex') || e.getAttribute('data-ratio') === localStorage.getItem('ratio')){
+            const chosenSex = e.getAttribute('id') === localStorage.getItem('sex'),
+                chosenRatio = e.getAttribute('data-ratio') === localStorage.getItem('ratio');
+            if (chosenSex || chosenRatio){
                 e.classList.add(activeClass);        
             } else {
                 e.classList.remove(activeClass);
