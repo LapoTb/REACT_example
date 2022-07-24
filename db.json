@@ -23,15 +23,6 @@
     }
   ],
   "requests": [
-    {
-      "name": "asdfsadf",
-      "phone": "еипкмасвчыфяф",
-      "id": 1
-    },
-    {
-      "name": "asdfsadf",
-      "phone": "еипкмасвчыфяф",
-      "id": 2
-    }
+
   ]
 }
