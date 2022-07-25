@@ -1,18 +1,29 @@
-function slider() {
-    // Slider
+// Slider
 
+/*
+sliderDesc:
+    slides:
+    slider:
+    prev:
+    next:
+    total:
+    current:
+    wrapper:
+    field:
+*/
+function slider(sliderDesc) {
     let offset = 0;
     let slideIndex = 1;
 
-    const slides = document.querySelectorAll('.offer__slide'),
-        slider = document.querySelector('.offer__slider'),
-        prev = document.querySelector('.offer__slider-prev'),
-        next = document.querySelector('.offer__slider-next'),
-        total = document.querySelector('#total'),
-        current = document.querySelector('#current'),
-        slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+    const slides = document.querySelectorAll(sliderDesc.slides),
+        slider = document.querySelector(sliderDesc.slider),
+        prev = document.querySelector(sliderDesc.prev),
+        next = document.querySelector(sliderDesc.next),
+        total = document.querySelector(sliderDesc.total),
+        current = document.querySelector(sliderDesc.current),
+        slidesWrapper = document.querySelector(sliderDesc.wrapper),
         width = window.getComputedStyle(slidesWrapper).width,
-        slidesField = document.querySelector('.offer__slider-inner');
+        slidesField = document.querySelector(sliderDesc.field);
 
     if (slides.length < 10) {
         total.textContent = `0${slides.length}`;
@@ -151,4 +162,4 @@ function slider() {
     }
 }
 
-module.exports = slider;
+export default slider;
